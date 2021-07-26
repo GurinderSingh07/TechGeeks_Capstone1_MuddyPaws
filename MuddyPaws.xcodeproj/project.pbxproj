@@ -24,6 +24,8 @@
 		9B82AE4226AE5E32000E5341 /* SelectTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */; };
 		9B82AE4526AE6C65000E5341 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4426AE6C65000E5341 /* Calendar.swift */; };
 		9B82AE4726AE783E000E5341 /* SittingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4626AE783E000E5341 /* SittingPrice.swift */; };
+		9B82AE4926AE7C39000E5341 /* SittingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4826AE7C39000E5341 /* SittingInfo.swift */; };
+		9B82AE4B26AE7D10000E5341 /* SittingInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4A26AE7D10000E5341 /* SittingInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeCell.swift; sourceTree = "<group>"; };
 		9B82AE4426AE6C65000E5341 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		9B82AE4626AE783E000E5341 /* SittingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingPrice.swift; sourceTree = "<group>"; };
+		9B82AE4826AE7C39000E5341 /* SittingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingInfo.swift; sourceTree = "<group>"; };
+		9B82AE4A26AE7D10000E5341 /* SittingInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingInfoCell.swift; sourceTree = "<group>"; };
 		AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.debug.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.release.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */,
+				9B82AE4A26AE7D10000E5341 /* SittingInfoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				9B6166EF26AE44E800F63006 /* UserHome.swift */,
 				9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */,
 				9B82AE4626AE783E000E5341 /* SittingPrice.swift */,
+				9B82AE4826AE7C39000E5341 /* SittingInfo.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -271,9 +277,11 @@
 			files = (
 				9B82AE4526AE6C65000E5341 /* Calendar.swift in Sources */,
 				9B6166CC26AE309E00F63006 /* AppDelegate.swift in Sources */,
+				9B82AE4B26AE7D10000E5341 /* SittingInfoCell.swift in Sources */,
 				9B82AE4726AE783E000E5341 /* SittingPrice.swift in Sources */,
 				9B6166F026AE44E800F63006 /* UserHome.swift in Sources */,
 				9B6166E426AE391100F63006 /* LandingScreen.swift in Sources */,
+				9B82AE4926AE7C39000E5341 /* SittingInfo.swift in Sources */,
 				9B6166CE26AE309E00F63006 /* SceneDelegate.swift in Sources */,
 				9B82AE4026AE525D000E5341 /* SittingBoardingCntrlr.swift in Sources */,
 				9B6166EA26AE3FF800F63006 /* SideMenu.swift in Sources */,
