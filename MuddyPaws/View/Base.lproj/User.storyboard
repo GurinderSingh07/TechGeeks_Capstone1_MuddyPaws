@@ -1953,6 +1953,146 @@
             </objects>
             <point key="canvasLocation" x="2074" y="126"/>
         </scene>
+        <!--Sitting Price-->
+        <scene sceneID="ptP-7a-hdb">
+            <objects>
+                <viewController storyboardIdentifier="SittingPrice" id="Uf5-1h-olo" customClass="SittingPrice" customModule="Muddy_Paws" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZwY-ES-0PA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-1r-fVs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-Xl-ZgO">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="LNf-17-npM">
+                                        <rect key="frame" x="15" y="40" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="25Y-Ty-QSy"/>
+                                            <constraint firstAttribute="width" constant="20" id="li0-DJ-8Ff"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvn-fh-sVq">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="9yk-HY-cxB"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="tapBack:" destination="Uf5-1h-olo" eventType="touchUpInside" id="928-NV-NKa"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PET SITTING PRICES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKf-GT-nBd">
+                                        <rect key="frame" x="101.00000000000001" y="37" width="173.33333333333337" height="26"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Kvn-fh-sVq" secondAttribute="bottom" id="4ip-lG-pYu"/>
+                                    <constraint firstAttribute="height" constant="70" id="AGW-qo-CQ8"/>
+                                    <constraint firstItem="JKf-GT-nBd" firstAttribute="centerX" secondItem="ea2-1r-fVs" secondAttribute="centerX" id="DA1-pM-uhY"/>
+                                    <constraint firstItem="LNf-17-npM" firstAttribute="leading" secondItem="ea2-1r-fVs" secondAttribute="leading" constant="15" id="GSJ-b8-HbR"/>
+                                    <constraint firstItem="vp4-Xl-ZgO" firstAttribute="leading" secondItem="ea2-1r-fVs" secondAttribute="leading" id="LG1-i0-sdf"/>
+                                    <constraint firstItem="Kvn-fh-sVq" firstAttribute="top" secondItem="ea2-1r-fVs" secondAttribute="top" id="Za9-bf-V1n"/>
+                                    <constraint firstAttribute="trailing" secondItem="vp4-Xl-ZgO" secondAttribute="trailing" id="kSX-py-YXH"/>
+                                    <constraint firstItem="Kvn-fh-sVq" firstAttribute="leading" secondItem="ea2-1r-fVs" secondAttribute="leading" id="mOJ-7O-yVk"/>
+                                    <constraint firstAttribute="bottom" secondItem="vp4-Xl-ZgO" secondAttribute="bottom" id="nLV-Z8-cXp"/>
+                                    <constraint firstAttribute="bottom" secondItem="LNf-17-npM" secondAttribute="bottom" constant="10" id="suh-nO-rXI"/>
+                                    <constraint firstItem="vp4-Xl-ZgO" firstAttribute="top" secondItem="ea2-1r-fVs" secondAttribute="top" id="tRg-3H-ITR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kvn-fh-sVq" secondAttribute="bottom" id="wKL-WU-54Q"/>
+                                    <constraint firstItem="JKf-GT-nBd" firstAttribute="centerY" secondItem="LNf-17-npM" secondAttribute="centerY" id="yXt-gD-zxo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-ZS-FZN">
+                                <rect key="frame" x="20" y="95" width="335" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Boarding - " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ko-KW-EfO">
+                                        <rect key="frame" x="10" y="10" width="98" height="26"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <color key="textColor" red="0.047058823530000002" green="0.76046139000000001" blue="0.54933518169999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$39/night" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-to-23U">
+                                        <rect key="frame" x="113" y="11" width="92" height="24"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="An overnight stay where your pet stay at the home of your dog walker. Pick-up and drop-off available !" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TP-iZ-BPW">
+                                        <rect key="frame" x="10" y="36" width="315" height="139"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8980392157" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="aHh-to-23U" firstAttribute="leading" secondItem="9Ko-KW-EfO" secondAttribute="trailing" constant="5" id="BAO-vp-yys"/>
+                                    <constraint firstItem="9Ko-KW-EfO" firstAttribute="leading" secondItem="RIa-ZS-FZN" secondAttribute="leading" constant="10" id="Eu7-AE-H5v"/>
+                                    <constraint firstItem="9Ko-KW-EfO" firstAttribute="top" secondItem="RIa-ZS-FZN" secondAttribute="top" constant="10" id="P4d-4m-Ot1"/>
+                                    <constraint firstItem="aHh-to-23U" firstAttribute="centerY" secondItem="9Ko-KW-EfO" secondAttribute="centerY" id="U0I-51-4ha"/>
+                                    <constraint firstAttribute="bottom" secondItem="7TP-iZ-BPW" secondAttribute="bottom" constant="5" id="X0R-o6-Ml7"/>
+                                    <constraint firstItem="7TP-iZ-BPW" firstAttribute="leading" secondItem="9Ko-KW-EfO" secondAttribute="leading" id="aZb-Fi-obg"/>
+                                    <constraint firstAttribute="height" constant="180" id="c67-pZ-cLs"/>
+                                    <constraint firstItem="7TP-iZ-BPW" firstAttribute="top" secondItem="9Ko-KW-EfO" secondAttribute="bottom" id="dfy-Cm-I7G"/>
+                                    <constraint firstAttribute="trailing" secondItem="7TP-iZ-BPW" secondAttribute="trailing" constant="10" id="vuv-1r-YL1"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbd-vs-foH">
+                                <rect key="frame" x="20" y="290" width="335" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Pick-up/Drop-off -" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3W-67-zve">
+                                        <rect key="frame" x="10" y="10" width="171.33333333333334" height="26"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <color key="textColor" red="0.047058823530000002" green="0.76046139000000001" blue="0.54933518169999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-TZ-Fcu">
+                                        <rect key="frame" x="186.33333333333334" y="12" width="33.666666666666657" height="22"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Includes pick-up and drop-off" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npc-Dx-7DH">
+                                        <rect key="frame" x="10" y="36" width="315" height="39"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8980392157" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Npc-Dx-7DH" firstAttribute="top" secondItem="P3W-67-zve" secondAttribute="bottom" id="C1b-9v-nar"/>
+                                    <constraint firstItem="P3W-67-zve" firstAttribute="leading" secondItem="Dbd-vs-foH" secondAttribute="leading" constant="10" id="NzF-7m-AA9"/>
+                                    <constraint firstAttribute="height" constant="80" id="VZk-p2-FnW"/>
+                                    <constraint firstItem="P3W-67-zve" firstAttribute="top" secondItem="Dbd-vs-foH" secondAttribute="top" constant="10" id="dec-5B-9i0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Npc-Dx-7DH" secondAttribute="trailing" constant="10" id="lUQ-Lc-Jju"/>
+                                    <constraint firstItem="Npc-Dx-7DH" firstAttribute="leading" secondItem="P3W-67-zve" secondAttribute="leading" id="lgL-l4-WIj"/>
+                                    <constraint firstItem="TgU-TZ-Fcu" firstAttribute="leading" secondItem="P3W-67-zve" secondAttribute="trailing" constant="5" id="rfx-qB-e2O"/>
+                                    <constraint firstItem="TgU-TZ-Fcu" firstAttribute="centerY" secondItem="P3W-67-zve" secondAttribute="centerY" id="uav-2l-hQT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Npc-Dx-7DH" secondAttribute="bottom" constant="5" id="wo5-9V-JS4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dbd-vs-foH" firstAttribute="leading" secondItem="RIa-ZS-FZN" secondAttribute="leading" id="3fN-ru-bdX"/>
+                            <constraint firstItem="RIa-ZS-FZN" firstAttribute="leading" secondItem="ZwY-ES-0PA" secondAttribute="leading" constant="20" id="4tp-QQ-aOD"/>
+                            <constraint firstItem="ea2-1r-fVs" firstAttribute="top" secondItem="ZwY-ES-0PA" secondAttribute="top" id="Afk-iG-ebm"/>
+                            <constraint firstItem="ea2-1r-fVs" firstAttribute="leading" secondItem="ZwY-ES-0PA" secondAttribute="leading" id="Jld-Bw-K1n"/>
+                            <constraint firstItem="Dbd-vs-foH" firstAttribute="trailing" secondItem="RIa-ZS-FZN" secondAttribute="trailing" id="NZO-vo-iOu"/>
+                            <constraint firstAttribute="trailing" secondItem="ea2-1r-fVs" secondAttribute="trailing" id="TL8-cc-Gvk"/>
+                            <constraint firstAttribute="trailing" secondItem="RIa-ZS-FZN" secondAttribute="trailing" constant="20" id="b5H-sW-jPt"/>
+                            <constraint firstItem="Dbd-vs-foH" firstAttribute="top" secondItem="RIa-ZS-FZN" secondAttribute="bottom" constant="15" id="eul-Po-V62"/>
+                            <constraint firstItem="RIa-ZS-FZN" firstAttribute="top" secondItem="ea2-1r-fVs" secondAttribute="bottom" constant="25" id="h4I-j3-y5O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fiK-K3-oEC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CK-JS-3cR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2073" y="802"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="503" height="492"/>

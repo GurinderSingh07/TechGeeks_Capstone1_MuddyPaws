@@ -23,6 +23,7 @@
 		9B82AE4026AE525D000E5341 /* SittingBoardingCntrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */; };
 		9B82AE4226AE5E32000E5341 /* SelectTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */; };
 		9B82AE4526AE6C65000E5341 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4426AE6C65000E5341 /* Calendar.swift */; };
+		9B82AE4726AE783E000E5341 /* SittingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4626AE783E000E5341 /* SittingPrice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingBoardingCntrlr.swift; sourceTree = "<group>"; };
 		9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeCell.swift; sourceTree = "<group>"; };
 		9B82AE4426AE6C65000E5341 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		9B82AE4626AE783E000E5341 /* SittingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingPrice.swift; sourceTree = "<group>"; };
 		AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.debug.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.release.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 				9B6166ED26AE44BC00F63006 /* RootNavigation.swift */,
 				9B6166EF26AE44E800F63006 /* UserHome.swift */,
 				9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */,
+				9B82AE4626AE783E000E5341 /* SittingPrice.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				9B82AE4526AE6C65000E5341 /* Calendar.swift in Sources */,
 				9B6166CC26AE309E00F63006 /* AppDelegate.swift in Sources */,
+				9B82AE4726AE783E000E5341 /* SittingPrice.swift in Sources */,
 				9B6166F026AE44E800F63006 /* UserHome.swift in Sources */,
 				9B6166E426AE391100F63006 /* LandingScreen.swift in Sources */,
 				9B6166CE26AE309E00F63006 /* SceneDelegate.swift in Sources */,
