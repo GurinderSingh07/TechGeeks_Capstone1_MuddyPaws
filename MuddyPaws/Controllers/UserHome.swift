@@ -62,6 +62,7 @@ class UserHome: UIViewController {
     // MARK:- UIButtons
     @IBAction func tapMenu(_ sender: Any){
         
+        AppDelegate.sharedInstance().sideVC?.animateDrawerOpening()
     }
     
     @IBAction func tapServices(_ sender: UIButton) {
