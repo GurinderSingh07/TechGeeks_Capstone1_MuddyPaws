@@ -47,6 +47,13 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
 
     }
     
+    // MARK:- Class Variables
+    var selectedTextField : UITextField?
+    
+    var petPicker: UIPickerView!
+    
+    var petPickerOptions = [String]()
+    
     func showAlert() {
         let alert = UIAlertController()
         
@@ -89,7 +96,80 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    // MARK:- TextField
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == tfGender {
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Male","Female"]
+            tfGender.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfType{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Dog","Cat"]
+            tfType.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfSize{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Small","Medium","Large"]
+            tfSize.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfSpayed{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfSpayed.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfMicrochip{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfMicrochip.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfLeashReactive{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfLeashReactive.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfGenderIssues{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfGenderIssues.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfAggressiveBehaviour{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfAggressiveBehaviour.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfMedication{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfMedication.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        else if textField == tfMedicalIssues{
+            selectedTextField = textField
+            petPickerOptions.removeAll()
+            petPickerOptions = ["Yes","No"]
+            tfMedicalIssues.inputView = petPicker
+            petPicker.reloadAllComponents()
+        }
+        return true
+    }
     
     // MARK:- UIButtons
     @IBAction func tapDogCat(_ sender: UIButton) {
