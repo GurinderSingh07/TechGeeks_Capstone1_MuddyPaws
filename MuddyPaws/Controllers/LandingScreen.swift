@@ -1,8 +1,8 @@
 //
 //  LandingScreen.swift
-//  MuddyPaws
+//  Muddy Paws
 //
-//  Created by Gurinder Singh on 25/07/21.
+//  Created by Gurinder Singh on 27/06/21.
 //  Copyright © 2021 TechGeeks. All rights reserved.
 //
 
@@ -10,19 +10,52 @@ import UIKit
 
 class LandingScreen: UIViewController {
 
-    override func viewDidLoad() {
+    // MARK:- IBOutlets
+    
+   
+    // MARK:- ViewLifeCycle
+    override func viewDidLoad(){
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
     }
-    */
+    
+    override func didReceiveMemoryWarning(){
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK:- PrivateMethods
+    func setInitials(){
+        
+    }
+    
+    
+    
+    // MARK:- UIButtons
+    @IBAction func tapFacebook(_ sender: Any) {
+        
+    }
+    
+    @IBAction func tapGoogle(_ sender: Any) {
+        
+    }
+    
+    @IBAction func tapServiceProvider(_ sender: UIButton) {
+       
+    }
+    
+    @IBAction func tapSignup(_ sender: Any) {
+       
+        
+    }
+    
+    @IBAction func tapLogin(_ sender: Any) {
+       
+        let login = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "Login")
+        self.navigationController?.pushViewController(login, animated: true)
+    }
 }
