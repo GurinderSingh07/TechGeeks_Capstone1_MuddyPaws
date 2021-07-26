@@ -9,8 +9,7 @@
 import UIKit
 import PhotosUI
 
-class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
-
+class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate  {
     // MARK:- IBOutlets
     @IBOutlet weak var btnDog: UIButton!
     @IBOutlet weak var btnCat: UIButton!
@@ -42,17 +41,34 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
     
     @IBOutlet weak var imgPet: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     // MARK:- Class Variables
     var selectedTextField : UITextField?
     
     var petPicker: UIPickerView!
     
     var petPickerOptions = [String]()
+    
+    // MARK:- ViewLifeCycle
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        setInitials()
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+    }
+    
+    // MARK:- PrivateMethods
+    func setInitials(){
+        petPicker = UIPickerView()
+        petPicker.dataSource = self
+        petPicker.delegate = self
+    }
+    
+    func tapPet(select:(UIButton,UIColor) , unselect:(UIButton,UIColor)){
+        select.0.backgroundColor = select.1
+        unselect.0.backgroundColor = unselect.1
+    }
     
     func showAlert() {
         let alert = UIAlertController()
@@ -95,7 +111,7 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
         imgPet.image = image
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     // MARK:- TextField
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == tfGender {
@@ -173,20 +189,87 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
     
     // MARK:- UIButtons
     @IBAction func tapDogCat(_ sender: UIButton) {
-        
+        if sender.tag == 0{
+            if btnDog.backgroundColor == UIColor(red: 120/256, green: 88/256, blue: 207/256, alpha: 1){
+                tapPet(select: (btnDog,UIColor(red: 120/256, green: 88/256, blue: 207/256, alpha: 1)), unselect: (btnCat,UIColor(red: 12/256, green: 194/256, blue: 140/256, alpha: 1)))
+            }
+            else{
+                tapPet(select: (btnDog,UIColor(red: 120/256, green: 88/256, blue: 207/256, alpha: 1)), unselect: (btnCat,UIColor(red: 12/256, green: 194/256, blue: 140/256, alpha: 1)))
+            }
+        }
+        else{
+            if btnCat.backgroundColor == UIColor(red: 12/256, green: 194/256, blue: 140/256, alpha: 1){
+                tapPet(select: (btnCat,UIColor(red: 120/256, green: 88/256, blue: 207/256, alpha: 1)), unselect: (btnDog,UIColor(red: 12/256, green: 194/256, blue: 140/256, alpha: 1)))
+            }
+            else{
+                tapPet(select: (btnCat,UIColor(red: 120/256, green: 88/256, blue: 207/256, alpha: 1)), unselect: (btnDog,UIColor(red: 12/256, green: 194/256, blue: 140/256, alpha: 1)))
+            }
+        }
     }
     
     @IBAction func tapCamera(_ sender: UIButton) {
-        
         showAlert()
     }
     
     @IBAction func tapSave(_ sender: Any) {
-       
+        let alert = UIAlertController(title: title , message: "Pet Added Successfully", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { finished in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true)
     }
     
     @IBAction func tapBack(_ sender: Any) {
-        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK:- PickerView
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        return petPickerOptions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return petPickerOptions[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        selectedTextField?.text = petPickerOptions[row]
+        if selectedTextField == tfMicrochip {
+            if row == 0{
+                showMicrochipNumberField()
+            }
+            else{
+                hideMicrochipNumberField()
+            }
+        }
+        if selectedTextField == tfAggressiveBehaviour {
+            if row == 0{
+                showAggressiveBehaviourField()
+            }
+            else{
+                hideAggressiveBehaviourField()
+            }
+        }
+        if selectedTextField == tfMedication {
+            if row == 0{
+                showMedicatinField()
+            }
+            else{
+                hideMedicatinField()
+            }
+        }
+        if selectedTextField == tfMedicalIssues {
+            if row == 0{
+                showMedicalIssuesField()
+            }
+            else{
+                hideMedicalIssuesField()
+            }
+        }
     }
     
     //MARK:- Animations
