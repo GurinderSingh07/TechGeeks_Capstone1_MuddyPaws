@@ -67,6 +67,21 @@ class UserHome: UIViewController {
     
     @IBAction func tapServices(_ sender: UIButton) {
         
+        if sender.tag == 0 {
+            service = "sitting"
+            let boarding = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "SittingBoardingCntrlr") as! SittingBoardingCntrlr
+            boarding.serviceType = service
+            self.navigationController?.pushViewController(boarding, animated: true)
+        }
+        else if sender.tag == 1 {
+            
+        }
+        else if sender.tag == 2 {
+           
+        }
+        else {
+            
+        }
     }
     
     @IBAction func tapBg(_ sender: Any) {

@@ -19,6 +19,7 @@
 		9B6166EE26AE44BC00F63006 /* RootNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166ED26AE44BC00F63006 /* RootNavigation.swift */; };
 		9B6166F026AE44E800F63006 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166EF26AE44E800F63006 /* UserHome.swift */; };
 		9B82AE3E26AE4EAA000E5341 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B82AE3C26AE4EAA000E5341 /* User.storyboard */; };
+		9B82AE4026AE525D000E5341 /* SittingBoardingCntrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9B6166ED26AE44BC00F63006 /* RootNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigation.swift; sourceTree = "<group>"; };
 		9B6166EF26AE44E800F63006 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		9B82AE3D26AE4EAA000E5341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
+		9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingBoardingCntrlr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				9B6166E926AE3FF800F63006 /* SideMenu.swift */,
 				9B6166ED26AE44BC00F63006 /* RootNavigation.swift */,
 				9B6166EF26AE44E800F63006 /* UserHome.swift */,
+				9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				9B6166F026AE44E800F63006 /* UserHome.swift in Sources */,
 				9B6166E426AE391100F63006 /* LandingScreen.swift in Sources */,
 				9B6166CE26AE309E00F63006 /* SceneDelegate.swift in Sources */,
+				9B82AE4026AE525D000E5341 /* SittingBoardingCntrlr.swift in Sources */,
 				9B6166EA26AE3FF800F63006 /* SideMenu.swift in Sources */,
 				9B6166EE26AE44BC00F63006 /* RootNavigation.swift in Sources */,
 				9B6166E626AE3BC900F63006 /* Login.swift in Sources */,
