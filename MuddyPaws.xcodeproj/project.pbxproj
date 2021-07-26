@@ -15,6 +15,10 @@
 		9B6166E426AE391100F63006 /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166E326AE391100F63006 /* LandingScreen.swift */; };
 		9B6166E626AE3BC900F63006 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166E526AE3BC900F63006 /* Login.swift */; };
 		9B6166E826AE3E3100F63006 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166E726AE3E3100F63006 /* SignUp.swift */; };
+		9B6166EA26AE3FF800F63006 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166E926AE3FF800F63006 /* SideMenu.swift */; };
+		9B6166EE26AE44BC00F63006 /* RootNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166ED26AE44BC00F63006 /* RootNavigation.swift */; };
+		9B6166F026AE44E800F63006 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166EF26AE44E800F63006 /* UserHome.swift */; };
+		9B82AE3E26AE4EAA000E5341 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B82AE3C26AE4EAA000E5341 /* User.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		9B6166E326AE391100F63006 /* LandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
 		9B6166E526AE3BC900F63006 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		9B6166E726AE3E3100F63006 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		9B6166E926AE3FF800F63006 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		9B6166ED26AE44BC00F63006 /* RootNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigation.swift; sourceTree = "<group>"; };
+		9B6166EF26AE44E800F63006 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		9B82AE3D26AE4EAA000E5341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 		9B6166E026AE310900F63006 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B82AE3C26AE4EAA000E5341 /* User.storyboard */,
 				9B6166D626AE30A700F63006 /* LaunchScreen.storyboard */,
 				9B6166D126AE309E00F63006 /* Register.storyboard */,
 			);
@@ -101,6 +110,9 @@
 				9B6166E326AE391100F63006 /* LandingScreen.swift */,
 				9B6166E526AE3BC900F63006 /* Login.swift */,
 				9B6166E726AE3E3100F63006 /* SignUp.swift */,
+				9B6166E926AE3FF800F63006 /* SideMenu.swift */,
+				9B6166ED26AE44BC00F63006 /* RootNavigation.swift */,
+				9B6166EF26AE44E800F63006 /* UserHome.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6166D826AE30A700F63006 /* LaunchScreen.storyboard in Resources */,
+				9B82AE3E26AE4EAA000E5341 /* User.storyboard in Resources */,
 				9B6166D526AE30A700F63006 /* Assets.xcassets in Resources */,
 				9B6166D326AE309E00F63006 /* Register.storyboard in Resources */,
 			);
@@ -177,8 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6166CC26AE309E00F63006 /* AppDelegate.swift in Sources */,
+				9B6166F026AE44E800F63006 /* UserHome.swift in Sources */,
 				9B6166E426AE391100F63006 /* LandingScreen.swift in Sources */,
 				9B6166CE26AE309E00F63006 /* SceneDelegate.swift in Sources */,
+				9B6166EA26AE3FF800F63006 /* SideMenu.swift in Sources */,
+				9B6166EE26AE44BC00F63006 /* RootNavigation.swift in Sources */,
 				9B6166E626AE3BC900F63006 /* Login.swift in Sources */,
 				9B6166E826AE3E3100F63006 /* SignUp.swift in Sources */,
 			);
@@ -201,6 +217,14 @@
 				9B6166D726AE30A700F63006 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9B82AE3C26AE4EAA000E5341 /* User.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B82AE3D26AE4EAA000E5341 /* Base */,
+			);
+			name = User.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

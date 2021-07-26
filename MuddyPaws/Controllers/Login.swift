@@ -36,6 +36,8 @@ class Login: UIViewController,UITextFieldDelegate {
     // MARK:- UIButtons
     @IBAction func tapLogin(_ sender: Any) {
         
+        let user = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")
+        self.navigationController?.pushViewController(user, animated: true)
     }
     
     @IBAction func tapBackHome(_ sender: Any) {
