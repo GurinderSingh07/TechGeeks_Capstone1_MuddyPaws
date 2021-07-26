@@ -93,6 +93,8 @@ class SittingInfo: UIViewController,UICollectionViewDataSource,UICollectionViewD
     
     @IBAction func tapAdd(_ sender: Any){
         
+        let addPet = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "AddPet")
+        self.navigationController?.pushViewController(addPet, animated: true)
     }
     
     @IBAction func tapBack(_ sender: Any){
