@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13ABD5F45F0198172A4C1C8A /* Pods_MuddyPaws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701C73BE603164AE7A7AD8AE /* Pods_MuddyPaws.framework */; };
 		9B6166CC26AE309E00F63006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166CB26AE309D00F63006 /* AppDelegate.swift */; };
 		9B6166CE26AE309E00F63006 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166CD26AE309E00F63006 /* SceneDelegate.swift */; };
 		9B6166D326AE309E00F63006 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6166D126AE309E00F63006 /* Register.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701C73BE603164AE7A7AD8AE /* Pods_MuddyPaws.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuddyPaws.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6166C826AE309D00F63006 /* MuddyPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuddyPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6166CB26AE309D00F63006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6166CD26AE309E00F63006 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		9B6166EF26AE44E800F63006 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		9B82AE3D26AE4EAA000E5341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingBoardingCntrlr.swift; sourceTree = "<group>"; };
+		AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.debug.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.debug.xcconfig"; sourceTree = "<group>"; };
+		E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.release.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13ABD5F45F0198172A4C1C8A /* Pods_MuddyPaws.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52CE92F4F58D77EE9A4786B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				701C73BE603164AE7A7AD8AE /* Pods_MuddyPaws.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65282878982023E56C06CE1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */,
+				E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B6166BF26AE309D00F63006 = {
 			isa = PBXGroup;
 			children = (
 				9B6166CA26AE309D00F63006 /* MuddyPaws */,
 				9B6166C926AE309D00F63006 /* Products */,
+				65282878982023E56C06CE1E /* Pods */,
+				52CE92F4F58D77EE9A4786B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B6166DC26AE30A700F63006 /* Build configuration list for PBXNativeTarget "MuddyPaws" */;
 			buildPhases = (
+				2BC1A4F23E17BD3D384570CC /* [CP] Check Pods Manifest.lock */,
 				9B6166C426AE309D00F63006 /* Sources */,
 				9B6166C526AE309D00F63006 /* Frameworks */,
 				9B6166C626AE309D00F63006 /* Resources */,
+				04F1A83A66D234B1915D7E43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +213,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04F1A83A66D234B1915D7E43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BC1A4F23E17BD3D384570CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuddyPaws-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B6166C426AE309D00F63006 /* Sources */ = {
@@ -350,6 +419,7 @@
 		};
 		9B6166DD26AE30A700F63006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -368,6 +438,7 @@
 		};
 		9B6166DE26AE30A700F63006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
