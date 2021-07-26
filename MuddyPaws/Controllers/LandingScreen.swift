@@ -9,10 +9,10 @@
 import UIKit
 
 class LandingScreen: UIViewController {
-
+    
     // MARK:- IBOutlets
     
-   
+    
     // MARK:- ViewLifeCycle
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -45,16 +45,17 @@ class LandingScreen: UIViewController {
     }
     
     @IBAction func tapServiceProvider(_ sender: UIButton) {
-       
-    }
-    
-    @IBAction func tapSignup(_ sender: Any) {
-       
         
     }
     
+    @IBAction func tapSignup(_ sender: Any) {
+        
+        let signUp = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "Signup")
+        self.navigationController?.pushViewController(signUp, animated: true)
+    }
+    
     @IBAction func tapLogin(_ sender: Any) {
-       
+        
         let login = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "Login")
         self.navigationController?.pushViewController(login, animated: true)
     }
