@@ -26,6 +26,7 @@
 		9B82AE4726AE783E000E5341 /* SittingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4626AE783E000E5341 /* SittingPrice.swift */; };
 		9B82AE4926AE7C39000E5341 /* SittingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4826AE7C39000E5341 /* SittingInfo.swift */; };
 		9B82AE4B26AE7D10000E5341 /* SittingInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4A26AE7D10000E5341 /* SittingInfoCell.swift */; };
+		9B82AE4D26AE80D7000E5341 /* AddPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4C26AE80D7000E5341 /* AddPet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9B82AE4626AE783E000E5341 /* SittingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingPrice.swift; sourceTree = "<group>"; };
 		9B82AE4826AE7C39000E5341 /* SittingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingInfo.swift; sourceTree = "<group>"; };
 		9B82AE4A26AE7D10000E5341 /* SittingInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingInfoCell.swift; sourceTree = "<group>"; };
+		9B82AE4C26AE80D7000E5341 /* AddPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPet.swift; sourceTree = "<group>"; };
 		AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.debug.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.release.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 				9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */,
 				9B82AE4626AE783E000E5341 /* SittingPrice.swift */,
 				9B82AE4826AE7C39000E5341 /* SittingInfo.swift */,
+				9B82AE4C26AE80D7000E5341 /* AddPet.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				9B6166E626AE3BC900F63006 /* Login.swift in Sources */,
 				9B82AE4226AE5E32000E5341 /* SelectTimeCell.swift in Sources */,
 				9B6166E826AE3E3100F63006 /* SignUp.swift in Sources */,
+				9B82AE4D26AE80D7000E5341 /* AddPet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
