@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		9B6166F026AE44E800F63006 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6166EF26AE44E800F63006 /* UserHome.swift */; };
 		9B82AE3E26AE4EAA000E5341 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B82AE3C26AE4EAA000E5341 /* User.storyboard */; };
 		9B82AE4026AE525D000E5341 /* SittingBoardingCntrlr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */; };
+		9B82AE4226AE5E32000E5341 /* SelectTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */; };
+		9B82AE4526AE6C65000E5341 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82AE4426AE6C65000E5341 /* Calendar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		9B6166EF26AE44E800F63006 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		9B82AE3D26AE4EAA000E5341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		9B82AE3F26AE525D000E5341 /* SittingBoardingCntrlr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingBoardingCntrlr.swift; sourceTree = "<group>"; };
+		9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeCell.swift; sourceTree = "<group>"; };
+		9B82AE4426AE6C65000E5341 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.debug.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuddyPaws.release.xcconfig"; path = "Target Support Files/Pods-MuddyPaws/Pods-MuddyPaws.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +74,6 @@
 				AC2CEF7D580CBD1B48BE4116 /* Pods-MuddyPaws.debug.xcconfig */,
 				E3C204C671C48F3D104751B1 /* Pods-MuddyPaws.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,6 +113,7 @@
 		9B6166DF26AE30F500F63006 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9B82AE4426AE6C65000E5341 /* Calendar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -127,6 +131,7 @@
 		9B6166E126AE311300F63006 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9B82AE4126AE5E32000E5341 /* SelectTimeCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B82AE4526AE6C65000E5341 /* Calendar.swift in Sources */,
 				9B6166CC26AE309E00F63006 /* AppDelegate.swift in Sources */,
 				9B6166F026AE44E800F63006 /* UserHome.swift in Sources */,
 				9B6166E426AE391100F63006 /* LandingScreen.swift in Sources */,
@@ -269,6 +275,7 @@
 				9B6166EA26AE3FF800F63006 /* SideMenu.swift in Sources */,
 				9B6166EE26AE44BC00F63006 /* RootNavigation.swift in Sources */,
 				9B6166E626AE3BC900F63006 /* Login.swift in Sources */,
+				9B82AE4226AE5E32000E5341 /* SelectTimeCell.swift in Sources */,
 				9B6166E826AE3E3100F63006 /* SignUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
