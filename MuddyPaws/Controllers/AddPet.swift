@@ -89,6 +89,8 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    
     // MARK:- UIButtons
     @IBAction func tapDogCat(_ sender: UIButton) {
         
@@ -105,5 +107,86 @@ class AddPet: UIViewController,UINavigationControllerDelegate,UIImagePickerContr
     
     @IBAction func tapBack(_ sender: Any) {
         
+    }
+    
+    //MARK:- Animations
+    func showMicrochipNumberField(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.constTopLeashReactive.constant = 85
+            self.view.layoutIfNeeded()
+        }, completion: {finished in
+            self.viewMicrochipNumber.alpha = 1
+        })
+    }
+    
+    func hideMicrochipNumberField(){
+        UIView.animate(withDuration: 0.3, animations: {
+             self.viewMicrochipNumber.alpha = 0
+        }, completion: {finished in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.constTopLeashReactive.constant = 20
+                self.view.layoutIfNeeded()
+            })
+        })
+    }
+    
+    func showAggressiveBehaviourField(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.constTopFeedInstruction.constant = 190
+            self.view.layoutIfNeeded()
+        }, completion: {finished in
+            self.viewDescribeBehaviour.alpha = 1
+        })
+    }
+    
+    func hideAggressiveBehaviourField(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewDescribeBehaviour.alpha = 0
+        }, completion: {finished in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.constTopFeedInstruction.constant = 20
+                self.view.layoutIfNeeded()
+            })
+        })
+    }
+    
+    func showMedicatinField(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.constTopMedicalIssues.constant = 190
+            self.view.layoutIfNeeded()
+        }, completion: {finished in
+            self.viewMedicationBehaviour.alpha = 1
+        })
+    }
+    
+    func hideMedicatinField(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMedicationBehaviour.alpha = 0
+        }, completion: {finished in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.constTopMedicalIssues.constant = 20
+                self.view.layoutIfNeeded()
+            })
+        })
+    }
+    
+    func showMedicalIssuesField(){
+        UIView.animate(withDuration: 0.5, animations: {
+            self.constTopVaccinationExpiry.constant = 190
+            self.view.layoutIfNeeded()
+        }, completion: {finished in
+            self.viewMedicalIssues.alpha = 1
+        })
+    }
+    
+    func hideMedicalIssuesField(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewMedicalIssues.alpha = 0
+        }, completion: {finished in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.constTopVaccinationExpiry.constant = 20
+                self.view.layoutIfNeeded()
+            })
+        })
     }
 }
