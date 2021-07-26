@@ -226,19 +226,19 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
     @IBAction func tapStartDateClose(_ sender: UIButton) {
         hideCalendar()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            
+            self.showTimeView()
         }
     }
     
     @IBAction func tapSelectTimeConfirm(_ sender: Any) {
         if isEndTime!{
-            
+            hideTimeView()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                 
             }
         }
         else{
-           
+            hideTimeView()
         }
     }
     
@@ -275,4 +275,28 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
             })
         })
     }
+    
+    func showTimeView(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewSelectTime.alpha = 1
+            self.btnBg.alpha = 0.6
+            self.calendarViewSB.transform = CGAffineTransform(scaleX:0, y: 0)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.viewSelectTime.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            })
+        })
+    }
+    
+    func hideTimeView(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.viewSelectTime.transform = CGAffineTransform(scaleX:1.1, y: 1.1)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.viewSelectTime.transform = CGAffineTransform(scaleX:0, y: 0)
+                self.btnBg.alpha = 0
+            })
+        })
+    }
 }
+
