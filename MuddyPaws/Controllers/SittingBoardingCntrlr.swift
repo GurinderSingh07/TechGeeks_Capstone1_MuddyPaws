@@ -156,6 +156,7 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
         isStartDate = true
         lblStartDateTitle.text = "Select Start Date"
         isEndTime = false
+        showCalendar()
     }
     
     @IBAction func tapEnd(_ sender: Any) {
@@ -163,6 +164,7 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
         lblStartDateTitle.text = "Select End Date"
         lblSelectTimeTitle.text = "Select End Time"
         isEndTime = true
+        showCalendar()
     }
     
     @IBAction func tapGotIt(_ sender: Any) {
@@ -208,6 +210,7 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
         }
     }
     
@@ -221,16 +224,21 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     @IBAction func tapStartDateClose(_ sender: UIButton) {
+        hideCalendar()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            
         }
     }
     
     @IBAction func tapSelectTimeConfirm(_ sender: Any) {
         if isEndTime!{
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                
             }
         }
         else{
+           
         }
     }
     
@@ -242,5 +250,29 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SelectTimeCell", for: indexPath) as! SelectTimeCell
         return cell
+    }
+    
+    // MARK:- Animations
+    func showCalendar(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.calendarViewSB.alpha = 1
+            self.btnBg.alpha = 0.6
+            self.calendarViewSB.transform = CGAffineTransform(scaleX:0, y: 0)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.calendarViewSB.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            })
+        })
+    }
+    
+    func hideCalendar(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.calendarViewSB.transform = CGAffineTransform(scaleX:1.1, y: 1.1)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.calendarViewSB.transform = CGAffineTransform(scaleX:0, y: 0)
+                self.btnBg.alpha = 0
+            })
+        })
     }
 }
