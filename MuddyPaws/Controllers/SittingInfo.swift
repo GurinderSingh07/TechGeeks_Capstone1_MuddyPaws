@@ -55,11 +55,13 @@ class SittingInfo: UIViewController,UICollectionViewDataSource,UICollectionViewD
             isShotRight = false
             lblYesOne.textColor = UIColor.green
             lblNoOne.textColor = UIColor.lightGray
+            SlideImgShotLeft()
         }
         else{
             isShotRight = true
             lblYesOne.textColor = UIColor.lightGray
             lblNoOne.textColor = UIColor.red
+            SlideImgShotRight()
         }
     }
     
@@ -68,27 +70,22 @@ class SittingInfo: UIViewController,UICollectionViewDataSource,UICollectionViewD
             isOvernightRight = false
             lblYesTwo.textColor = UIColor.green
             lblNoTwo.textColor = UIColor.lightGray
+            SlideImgOvernightLeft()
         }
         else{
             isOvernightRight = true
             lblYesTwo.textColor = UIColor.lightGray
             lblNoTwo.textColor = UIColor.red
+            SlideImgOvernightRight()
         }
     }
     
     @IBAction func tapNext(_ sender: Any){
-        if selectedPets.count == 0{
-            AppDelegate.sharedInstance().alertView(message: "Please Select Pet", controller: self)
-        }
-        else{
-            let addNotes = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "AddNotes")
-            self.navigationController?.pushViewController(addNotes, animated: true)
-        }
+        
     }
     
     @IBAction func tapAdd(_ sender: Any){
-        let addPet = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "AddPet")
-        self.navigationController?.pushViewController(addPet, animated: true)
+        
     }
     
     @IBAction func tapBack(_ sender: Any){
@@ -121,5 +118,34 @@ class SittingInfo: UIViewController,UICollectionViewDataSource,UICollectionViewD
             selectedPets.append(indexPath)
         }
         cvPets.reloadData()
+    }
+    
+    // MARK:- Animations
+    func SlideImgShotRight(){
+        UIView.animate(withDuration: 0.4) {
+            self.constLeadingImgShot.constant = 91
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func SlideImgShotLeft(){
+        UIView.animate(withDuration: 0.4) {
+            self.constLeadingImgShot.constant = -1
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func SlideImgOvernightRight(){
+        UIView.animate(withDuration: 0.4) {
+            self.constLeadingImgOvernight.constant = 91
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func SlideImgOvernightLeft(){
+        UIView.animate(withDuration: 0.4) {
+            self.constLeadingImgOvernight.constant = -1
+            self.view.layoutIfNeeded()
+        }
     }
 }
