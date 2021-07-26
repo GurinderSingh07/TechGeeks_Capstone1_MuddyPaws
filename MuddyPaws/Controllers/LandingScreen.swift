@@ -16,16 +16,11 @@ class LandingScreen: UIViewController {
     // MARK:- ViewLifeCycle
     override func viewDidLoad(){
         super.viewDidLoad()
-        
-        
+    
     }
     
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
-    }
-    
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
     }
     
     // MARK:- PrivateMethods

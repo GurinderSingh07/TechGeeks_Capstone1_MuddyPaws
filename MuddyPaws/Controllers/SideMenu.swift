@@ -56,10 +56,6 @@ class SideMenu: UIViewController {
         setupView()
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         AppDelegate.sharedInstance().sideVC = self

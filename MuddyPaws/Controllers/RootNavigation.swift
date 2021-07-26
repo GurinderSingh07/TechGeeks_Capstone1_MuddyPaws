@@ -23,10 +23,6 @@ class RootNavigation: UINavigationController {
         super.viewWillAppear(animated)
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         let home = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "UserHome")

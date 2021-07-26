@@ -24,10 +24,6 @@ class Login: UIViewController,UITextFieldDelegate {
         super.viewWillAppear(animated)
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         

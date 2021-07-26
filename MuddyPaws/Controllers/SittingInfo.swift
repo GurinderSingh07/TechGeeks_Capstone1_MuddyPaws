@@ -37,10 +37,6 @@ class SittingInfo: UIViewController,UICollectionViewDataSource,UICollectionViewD
         super.viewWillAppear(animated)
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         lblYesOne.textColor = UIColor.lightGray

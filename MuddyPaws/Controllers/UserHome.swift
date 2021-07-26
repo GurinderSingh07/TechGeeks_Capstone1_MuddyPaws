@@ -50,10 +50,6 @@ class UserHome: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         AppDelegate.sharedInstance().home = self

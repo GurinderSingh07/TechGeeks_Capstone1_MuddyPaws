@@ -22,10 +22,6 @@ class SittingPrice: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         
