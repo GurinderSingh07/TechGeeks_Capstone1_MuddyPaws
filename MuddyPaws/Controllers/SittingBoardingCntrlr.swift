@@ -210,7 +210,7 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            
+            self.hidePickupview()
         }
     }
     
@@ -234,7 +234,7 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
         if isEndTime!{
             hideTimeView()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                
+                self.showPickupView()
             }
         }
         else{
@@ -253,6 +253,26 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     // MARK:- Animations
+    func showPickupView(){
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 10, initialSpringVelocity: 10, options: [.curveEaseInOut], animations: {
+            self.btnBg.alpha = 0.6
+            self.constViewPickPriceTop.constant = UIScreen.main.bounds.size.height/2 - 240
+            self.view.layoutIfNeeded()
+        }, completion: { finished in
+            
+        })
+    }
+    
+    func hidePickupview(){
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 10, initialSpringVelocity: 10, options: [.curveEaseInOut], animations: {
+            self.constViewPickPriceTop.constant = UIScreen.main.bounds.size.height + 20
+            self.view.layoutIfNeeded()
+            self.btnBg.alpha = 0
+        }, completion: { finished in
+            self.constViewPickPriceTop.constant = -1000
+        })
+    }
+    
     func showCalendar(){
         UIView.animate(withDuration: 0.3, animations: {
             self.calendarViewSB.alpha = 1
