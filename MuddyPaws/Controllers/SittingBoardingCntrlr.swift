@@ -112,10 +112,6 @@ class SittingBoardingCntrlr: UIViewController,UITableViewDelegate,UITableViewDat
         }
     }
     
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK:- PrivateMethods
     func setInitials(){
         isFirstTime = true
