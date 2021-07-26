@@ -1,24 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cbv-zT-H68">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Landing Screen-->
+        <scene sceneID="yMF-Vx-fdE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="LandingScreen" id="BjR-kz-2a3" customClass="LandingScreen" customModule="Muddy_Paws" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9G-jW-yFh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="FpR-jj-meC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-yK-MOz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHf-rD-DLs" userLabel="ScrollableView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="654"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ay9-mv-8Sh">
+                                                <rect key="frame" x="117" y="70" width="180" height="229"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="d3b-P8-d4L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="180" id="3xo-r5-80u"/>
+                                                            <constraint firstAttribute="height" constant="180" id="dDC-Tf-7Xr"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="90"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muddy Paws" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJw-tG-QSf">
+                                                        <rect key="frame" x="6" y="190" width="168" height="39"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M10-k6-rXI">
+                                                <rect key="frame" x="50" y="349" width="314" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FlN-vs-Y8K"/>
+                                                </constraints>
+                                                <state key="normal" image="fb"/>
+                                                <connections>
+                                                    <action selector="tapFacebook:" destination="BjR-kz-2a3" eventType="touchUpInside" id="01e-pp-I2e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYW-XK-QDR">
+                                                <rect key="frame" x="50" y="419" width="314" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hGL-yh-RBS"/>
+                                                </constraints>
+                                                <state key="normal" image="gmail"/>
+                                                <connections>
+                                                    <action selector="tapGoogle:" destination="BjR-kz-2a3" eventType="touchUpInside" id="A2F-kA-2PN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMy-97-LlN">
+                                                <rect key="frame" x="50" y="489" width="314" height="50"/>
+                                                <color key="backgroundColor" red="0.47058823529999999" green="0.34509803919999998" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9p1-Rn-MaA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                <state key="normal" title="Service Provider"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapServiceProvider:" destination="BjR-kz-2a3" eventType="touchUpInside" id="EEu-pJ-lOh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPB-EA-KaK">
+                                                <rect key="frame" x="124.5" y="549" width="165" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="LfI-2a-g9B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <state key="normal" title="Sign Up With Email"/>
+                                                <connections>
+                                                    <action selector="tapSignup:" destination="BjR-kz-2a3" eventType="touchUpInside" id="7r6-Ub-Jik"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQX-rr-Buh">
+                                                <rect key="frame" x="59" y="594" width="296" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ptA-lZ-pO0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                <state key="normal" title="Already Have An Account ? Log In"/>
+                                                <connections>
+                                                    <action selector="tapLogin:" destination="BjR-kz-2a3" eventType="touchUpInside" id="wQG-I3-2mv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ay9-mv-8Sh" firstAttribute="top" secondItem="BHf-rD-DLs" secondAttribute="top" constant="70" id="2zC-j5-qLq"/>
+                                            <constraint firstItem="uYW-XK-QDR" firstAttribute="trailing" secondItem="M10-k6-rXI" secondAttribute="trailing" id="61Y-P0-YFA"/>
+                                            <constraint firstItem="HPB-EA-KaK" firstAttribute="top" secondItem="uYW-XK-QDR" secondAttribute="bottom" constant="80" id="879-Bb-sYf"/>
+                                            <constraint firstItem="mQX-rr-Buh" firstAttribute="centerX" secondItem="BHf-rD-DLs" secondAttribute="centerX" id="GJc-oP-LfM"/>
+                                            <constraint firstItem="mQX-rr-Buh" firstAttribute="top" secondItem="HPB-EA-KaK" secondAttribute="bottom" constant="5" id="HL4-SV-X53"/>
+                                            <constraint firstItem="Ay9-mv-8Sh" firstAttribute="centerX" secondItem="BHf-rD-DLs" secondAttribute="centerX" id="NCR-mW-w62"/>
+                                            <constraint firstAttribute="bottom" secondItem="mQX-rr-Buh" secondAttribute="bottom" constant="20" id="WiC-JB-cHh"/>
+                                            <constraint firstItem="bMy-97-LlN" firstAttribute="top" secondItem="uYW-XK-QDR" secondAttribute="bottom" constant="20" id="Yff-gm-gKy"/>
+                                            <constraint firstItem="uYW-XK-QDR" firstAttribute="leading" secondItem="M10-k6-rXI" secondAttribute="leading" id="ZHb-re-47I"/>
+                                            <constraint firstItem="uYW-XK-QDR" firstAttribute="top" secondItem="M10-k6-rXI" secondAttribute="bottom" constant="20" id="Zx8-9t-4ES"/>
+                                            <constraint firstAttribute="trailing" secondItem="M10-k6-rXI" secondAttribute="trailing" constant="50" id="aGE-Er-vS0"/>
+                                            <constraint firstItem="HPB-EA-KaK" firstAttribute="centerX" secondItem="BHf-rD-DLs" secondAttribute="centerX" id="e42-z8-6KM"/>
+                                            <constraint firstItem="M10-k6-rXI" firstAttribute="top" secondItem="Ay9-mv-8Sh" secondAttribute="bottom" constant="50" id="giJ-4P-br8"/>
+                                            <constraint firstItem="bMy-97-LlN" firstAttribute="trailing" secondItem="uYW-XK-QDR" secondAttribute="trailing" id="h4z-UV-xml"/>
+                                            <constraint firstItem="M10-k6-rXI" firstAttribute="leading" secondItem="BHf-rD-DLs" secondAttribute="leading" constant="50" id="q38-aQ-gEI"/>
+                                            <constraint firstItem="bMy-97-LlN" firstAttribute="leading" secondItem="uYW-XK-QDR" secondAttribute="leading" id="zGS-lN-waD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BHf-rD-DLs" firstAttribute="width" secondItem="UsY-yK-MOz" secondAttribute="width" id="AMm-ue-i7l"/>
+                                    <constraint firstAttribute="trailing" secondItem="BHf-rD-DLs" secondAttribute="trailing" id="fuk-WF-SwP"/>
+                                    <constraint firstAttribute="bottom" secondItem="BHf-rD-DLs" secondAttribute="bottom" id="jDu-Se-Xkp"/>
+                                    <constraint firstItem="BHf-rD-DLs" firstAttribute="top" secondItem="UsY-yK-MOz" secondAttribute="top" id="tms-OU-CQ5"/>
+                                    <constraint firstItem="BHf-rD-DLs" firstAttribute="leading" secondItem="UsY-yK-MOz" secondAttribute="leading" id="wrD-kQ-sOM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UsY-yK-MOz" secondAttribute="trailing" id="3X9-kx-b5N"/>
+                            <constraint firstItem="FpR-jj-meC" firstAttribute="leading" secondItem="W9G-jW-yFh" secondAttribute="leading" id="5Mp-ci-Hpr"/>
+                            <constraint firstAttribute="bottom" secondItem="FpR-jj-meC" secondAttribute="bottom" id="8N6-N8-pc5"/>
+                            <constraint firstAttribute="trailing" secondItem="FpR-jj-meC" secondAttribute="trailing" id="Uv6-g8-uPZ"/>
+                            <constraint firstItem="UsY-yK-MOz" firstAttribute="top" secondItem="W9G-jW-yFh" secondAttribute="top" id="bbf-Jl-a2R"/>
+                            <constraint firstItem="UsY-yK-MOz" firstAttribute="leading" secondItem="W9G-jW-yFh" secondAttribute="leading" id="etF-pe-kjT"/>
+                            <constraint firstAttribute="bottom" secondItem="UsY-yK-MOz" secondAttribute="bottom" id="vcg-fz-dYC"/>
+                            <constraint firstItem="FpR-jj-meC" firstAttribute="top" secondItem="W9G-jW-yFh" secondAttribute="top" id="wRj-8g-cJl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="skj-dI-Et7"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jDS-mC-B0j"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EX-TP-Qeg" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1950.7246376811595" y="107.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8wX-6C-Y1f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="cbv-zT-H68" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XeB-ne-L1Y">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BjR-kz-2a3" kind="relationship" relationship="rootViewController" id="qGv-at-ACK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qf-y2-xEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.5797101449275" y="107.8125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fb" width="869" height="160"/>
+        <image name="gmail" width="869" height="160"/>
+        <image name="login-logo" width="340" height="340"/>
+        <image name="splash" width="621" height="1104"/>
+    </resources>
 </document>
