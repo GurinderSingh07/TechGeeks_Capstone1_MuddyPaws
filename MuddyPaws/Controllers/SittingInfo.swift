@@ -82,6 +82,13 @@ class SittingInfo: UIViewController,UICollectionViewDataSource,UICollectionViewD
     
     @IBAction func tapNext(_ sender: Any){
         
+        if selectedPets.count == 0{
+            AppDelegate.sharedInstance().alertView(message: "Please Select Pet", controller: self)
+        }
+        else{
+            let addNotes = UIStoryboard(name: "User", bundle: nil).instantiateViewController(withIdentifier: "AddNotes")
+            self.navigationController?.pushViewController(addNotes, animated: true)
+        }
     }
     
     @IBAction func tapAdd(_ sender: Any){
